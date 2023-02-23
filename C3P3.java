@@ -13,6 +13,6 @@ public class C3P3 {
             n /= 10; // make new number
         } while ( n != 0);
         
-        System.out.println("The sum of the digits of the number is " + sum);
+        System.out.println("The sum of the cube of digits of the number is " + sum);
     }
 }
