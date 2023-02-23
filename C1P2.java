@@ -9,7 +9,7 @@ public class C1P2 {
 		int increment = IBIO.inputInt("Enter increment: ");
 		
 		for (int i = 0; i < step; i++, start += increment) {
-			IBIO.output(start);
+			System.out.println(start);
 		}
 	}
 }

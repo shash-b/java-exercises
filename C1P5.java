@@ -9,7 +9,7 @@ public class C1P5 {
 			for (int j = 0; j < i; j++) {
 				num *= 2;
 			}
-			IBIO.output(num);
+			System.out.println(num);
 		}
 	}
 }
