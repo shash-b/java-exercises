@@ -7,7 +7,9 @@ public class C4P1 {
         int a = IBIO.inputInt("enter first number ");
         int b = IBIO.inputInt("enter second number ");
         int num;
-        do
+        do {
+            // todo
+        } while (num != 3)
 
     }
 }
