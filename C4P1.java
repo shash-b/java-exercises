@@ -9,7 +9,7 @@ public class C4P1 {
         int num;
         do {
             // todo
-        } while (num != 3)
+        } while (num != 3);
 
     }
 }
