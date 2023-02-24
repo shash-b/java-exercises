@@ -16,7 +16,24 @@ public class Fraction {
         den = b;
     }
 
+    // overloaded constructor
+    public Fraction() {
+        num = 0;
+        den = 1;
+    }
+
     public String toString() {
-        return num + " / " + den;
+        return num + "/" + den;
+    }
+
+    public void enter() {
+        String strFraction = IBIO.input("Enter fraction (a/b format): ");
+        strFraction = strFraction.replace("/", " "); // changes slash to space
+        Scanner parse = new Scanner(strFraction); // to parse fraction
+
+        // extract numerator and denominator
+        num = parse.nextInt();
+        den = parse.nextInt();
+
     }
 }

@@ -4,7 +4,8 @@
 
 public class FractionTest {
     public static void main(String[] args) {
-        Fraction f = new Fraction(3, 4); // create a fraction
+        Fraction f = new Fraction(); // create a fraction
+        f.enter();
         System.out.println(f); // print itself
     }
 }
