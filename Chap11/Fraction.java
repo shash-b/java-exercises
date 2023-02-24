@@ -2,7 +2,7 @@
  * Ch 11
  */
 
-import java.util.Scanner; // for later use
+import java.util.Scanner;
 
 public class Fraction {
 
@@ -17,12 +17,13 @@ public class Fraction {
         this.simplify();
     }
 
-    // overloaded constructor
-   public Fraction() {
+    // overloaded constructor to give default values
+    public Fraction() {
         num = 0;
         den = 1;
     }
 
+    // to give a string representation of the object
     public String toString() {
         String result = "";
         if (den == 1)
@@ -69,5 +70,10 @@ public class Fraction {
         int div = gcd(this.num, this.den);
         this.num /= div;
         this.den /= div;
+    }
+
+    // Pr 11.3
+    public double toDecimal() {
+        return (double) this.num / this.den;
     }
 }
