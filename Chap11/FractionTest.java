@@ -20,6 +20,6 @@ public class FractionTest {
         d.enter(); //get the fraction
         System.out.println(d);; //print it
         double x = d.toDecimal();
-        IBIO.output(d + " in decimals = " + x);
+        System.out.println(d + " in decimals = " + x);
     }
 }
