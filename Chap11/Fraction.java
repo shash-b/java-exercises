@@ -11,16 +11,16 @@ public class Fraction {
     private int den;
 
     // constructor that creates a fraction
-    Fraction(int a, int b) {
-        num = a;
-        den = b;
-    }
-
-    // overloaded constructor
-    public Fraction() {
+    /* Fraction() {
         num = 0;
         den = 1;
-    }
+    } */
+
+    // overloaded constructor
+   /* public Fraction() {
+        num = 0;
+        den = 1;
+    } */
 
     public String toString() {
         return num + "/" + den;
@@ -35,5 +35,12 @@ public class Fraction {
         num = parse.nextInt();
         den = parse.nextInt();
 
+    }
+
+    public Fraction add(Fraction frac) {
+        Fraction result = new Fraction();
+        result.num = (this.num * frac.den) + (this.den * frac.num);
+        result.den = this.den * frac.den;
+        return result;
     }
 }
