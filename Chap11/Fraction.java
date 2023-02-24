@@ -11,19 +11,25 @@ public class Fraction {
     private int den;
 
     // constructor that creates a fraction
-    /* Fraction() {
-        num = 0;
-        den = 1;
-    } */
+    Fraction(int num, int den) {
+        this.num = num;
+        this.den = den;
+        this.simplify();
+    }
 
     // overloaded constructor
-   /* public Fraction() {
+   public Fraction() {
         num = 0;
         den = 1;
-    } */
+    }
 
     public String toString() {
-        return num + "/" + den;
+        String result = "";
+        if (den == 1)
+            result += num;
+        else
+            result += num + "/" + den;
+        return result;
     }
 
     public void enter() {
@@ -32,15 +38,36 @@ public class Fraction {
         Scanner parse = new Scanner(strFraction); // to parse fraction
 
         // extract numerator and denominator
-        num = parse.nextInt();
-        den = parse.nextInt();
+        this.num = parse.nextInt();
+        this.den = parse.nextInt();
 
+        this.simplify(); // simplifies the fraction object
     }
 
+    // Pr 11.1
     public Fraction add(Fraction frac) {
         Fraction result = new Fraction();
         result.num = (this.num * frac.den) + (this.den * frac.num);
         result.den = this.den * frac.den;
+        result.simplify();
         return result;
+    }
+
+    // Pr 11.2
+    private static int gcd(int num, int den) {
+        while (num != den) {
+            if (num > den)
+                num -= den;
+            else
+                den -= num;
+        }
+        return num;
+    }
+
+    // Pr 11.2
+    private void simplify() {
+        int div = gcd(this.num, this.den);
+        this.num /= div;
+        this.den /= div;
     }
 }
