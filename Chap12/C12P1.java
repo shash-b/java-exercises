@@ -1,3 +1,7 @@
+/*
+ * Pr 12.1
+ */
+
 public class C12P1 {
     public static void main(String args[]) { 
         int count = 0;
