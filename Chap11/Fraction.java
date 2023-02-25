@@ -33,7 +33,7 @@ public class Fraction {
         return result;
     }
 
-    public void enter() {
+    public void enter() throws Exception {
         String strFraction = IBIO.input("Enter fraction (a/b format): ");
         strFraction = strFraction.replace("/", " "); // changes slash to space
         Scanner parse = new Scanner(strFraction); // to parse fraction
@@ -41,6 +41,10 @@ public class Fraction {
         // extract numerator and denominator
         this.num = parse.nextInt();
         this.den = parse.nextInt();
+        
+        // Pr 11.4
+        if (this.den <= 0)
+            throw new Exception("Denominator must be greater than 0");
 
         this.simplify(); // simplifies the fraction object
     }
@@ -56,6 +60,9 @@ public class Fraction {
 
     // Pr 11.2
     private static int gcd(int num, int den) {
+        if (num <= 0)
+            return 1;
+
         while (num != den) {
             if (num > den)
                 num -= den;
