@@ -18,7 +18,7 @@ public class Fraction {
     }
 
     // overloaded constructor to give default values
-    public Fraction() {
+    Fraction() {
         num = 0;
         den = 1;
     }
