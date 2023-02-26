@@ -34,7 +34,7 @@ public class C12P2 {
         load.close();
 
         /* for (int i = 0; i < 20; i++) {
-            if (names[i].() == null)
+            if (names[i] == null)
                 break;
             System.out.println(names[i]);
         } */
