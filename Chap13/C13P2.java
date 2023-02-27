@@ -5,7 +5,7 @@
  import java.io.*;
 
  public class C13P2 {
-     public static void main(String args[]) throws IOException{
+    public static void main(String args[]) throws IOException{
         int count = 0;
         int number = IBIO.inputInt("Enter a number: ");
 
@@ -24,6 +24,6 @@
 
         load.close();
         System.out.println(count);
-     }
- }
+    }
+}
  
