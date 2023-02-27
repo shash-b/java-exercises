@@ -2,9 +2,9 @@
  * Pr 13.2
  */
 
- import java.io.*;
+import java.io.*;
 
- public class C13P2 {
+public class C13P2 {
     public static void main(String args[]) throws IOException{
         int count = 0;
         int number = IBIO.inputInt("Enter a number: ");
