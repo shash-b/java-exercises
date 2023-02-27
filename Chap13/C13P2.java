@@ -26,4 +26,3 @@ public class C13P2 {
         System.out.println(count);
     }
 }
- 
