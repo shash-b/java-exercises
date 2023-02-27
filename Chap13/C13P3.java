@@ -8,6 +8,7 @@ public class C13P3 {
     public static void main(String args[]) throws IOException{
         double count = 0;
         int len = 0;
+        
         File f = new File("Num1000"); // same as before
         FileReader fr = new FileReader(f);
         BufferedReader load = new BufferedReader(fr);
