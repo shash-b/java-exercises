@@ -15,7 +15,7 @@ public class C14P1 {
         FileWriter fw = new FileWriter(write);
         PrintWriter save = new PrintWriter(fw);
 
-        while(load.ready()) {
+        while (load.ready()) {
             String line = load.readLine();
             int num = Integer.parseInt(line);
             save.println(num + 10);
