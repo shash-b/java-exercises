@@ -13,18 +13,42 @@ public class C14P2 {
         FileReader fr = new FileReader(read);
         BufferedReader load = new BufferedReader(fr);
 
+        FileReader temporary = new FileReader(read);
+        BufferedReader first = new BufferedReader(temporary);
+
+        FileReader tempLast = new FileReader(read);
+        BufferedReader last = new BufferedReader(tempLast);
+
         FileWriter fw = new FileWriter(insert);
         PrintWriter save = new PrintWriter(fw);
+
+        String temp = first.readLine();
+        int prev = Integer.parseInt(temp);
+
+        first.close();
+
+        int end = 0;
+        while (last.ready()) {
+            String line = last.readLine();
+            end = Integer.parseInt(line);
+        }
+        last.close();
+
+        if (number <= prev)
+            save.println(number);
 
         while (load.ready()) {
             String line = load.readLine();
             int num = Integer.parseInt(line);
-            // if (condition)
+            if (number >= prev && number < num)
                 save.println(number);
             save.println(num);
+            prev = num;
         }
-
-        save.close();
         load.close();
+
+        if (number >= end)
+            save.println(number);
+        save.close();
     }
 }
